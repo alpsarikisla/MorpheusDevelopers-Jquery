@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Get ve Set İşlemleri</title>
+       
+    </head>
+    <body>
+        <h3>Ekleme İşlemleri</h3>
+        <div id="d_ekran"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quibusdam!</span></div>
+        <button id="btn_ekle">Ekle</button>
+    
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn_ekle").click(function(){
+                    $("#d_ekran").append("İçerik Eklendi");//Sona Ekle
+                    $("#d_ekran").prepend("İçerik Eklendi");//Başa Ekle
+                    metin1 = "<p style='color:Red;'>Paragraf 1 İçeriği</p>";
+                    metin2 = "<p style='color:Blue;'>Paragraf 2 İçeriği</p>";
+                    metin3 = document.createElement("p");
+                    metin3.innerHTML = "Paragraf 3 içeriği";
+                    $("body").append(metin1,metin2, metin3);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Silme İşlemleri</title>
+       <style>
+        .kutu{
+            border: 1px solid silver;
+        }
+       </style>
+    </head>
+    <body>
+        <h3>Silme İşlemleri</h3>
+        <div id="d_ekran"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quibusdam!</span></div>
+        <img id="img_resim" src="Resimler/none.jpg" width="100"><br>
+        <input type="text" id="tb_ekran" value="Metin Kutusu İçeriği"><br>
+        <p>Sınıfsız paragraf</p>
+        <p class="kutu">Sınıflı Paragraf</p>
+        <p>Sınıfsız paragraf</p>
+        <p class="kutu">Sınıflı Paragraf</p>
+        <p>Sınıfsız paragraf</p>
+        <button id="btn_elementSil">Element Sil</button>
+        <button id="btn_icerikSil">İçerik Sil</button>
+        <button id="btn_sinifagoreSil">Sınıfa Göre Sil</button>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn_elementSil").click(function(){
+                    $("#d_ekran").remove();
+                });
+                $("#btn_icerikSil").click(function(){
+                    $("#d_ekran").empty();
+                    $("#tb_ekran").val("");
+                });
+                $("#btn_sinifagoreSil").click(function(){
+                    $("p").remove(".kutu");
+                });
+            });
+        </script>
+    </body>
+</html>

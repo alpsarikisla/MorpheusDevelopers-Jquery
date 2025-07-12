@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Get ve Set İşlemleri</title>
+       
+    </head>
+    <body>
+        <h3>Get İşlemleri</h3>
+        <div id="d_ekran"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quibusdam!</span></div>
+        <img id="img_resim" src="Resimler/none.jpg" width="100"><br>
+        <input type="text" id="tb_ekran"><br>
+        <button id="btn_text">Text</button>
+        <button id="btn_val">Val</button>
+        <button id="btn_html">Html</button>
+        <button id="btn_attribute">Attribute</button>
+
+        <hr>
+        <h3>Set İşlemleri</h3>
+        <button id="btn_SetText">Set Text</button>
+        <button id="btn_SetVal">Set Val</button>
+        <button id="btn_SetHtml">Set Html</button>
+        <button id="btn_SetAttribute">Set Attribute</button>
+
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("#btn_text").click(function(){
+                    alert("Div Text = " + $("#d_ekran").text());
+                    alert("Input Text = " + $("#tb_ekran").text());
+               });
+               $("#btn_val").click(function(){
+                    alert("Div Value = " + $("#d_ekran").val());
+                    alert("Input Value = " + $("#tb_ekran").val());//***
+               });
+               $("#btn_html").click(function(){
+                    alert("Div HTML = " + $("#d_ekran").html());
+                    alert("Input HTML = " + $("#tb_ekran").html());
+               });
+               $("#btn_attribute").click(function(){
+                    alert("Resim Kaynağı = " + $("#img_resim").attr("src"));
+                    alert("Resim Genişliği = " + $("#img_resim").attr("width"));
+               });
+
+               $("#btn_SetText").click(function(){
+                    $("#d_ekran").text("Ben Ekranıııııım");
+               });
+               $("#btn_SetVal").click(function(){
+                    $("#tb_ekran").val("Ben Metin Kutusu");
+               });
+               $("#btn_SetHtml").click(function(){
+                   yazi =  $("#d_ekran").text();
+                   $("#d_ekran").html("<b>"+yazi+"</b>");
+               });
+                $("#btn_SetAttribute").click(function(){
+                   $("#img_resim").attr({"src": "Resimler/success.png","width":"200","height": "500"});
+               });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Silme İşlemleri</title>
+        <style>
+            .kutu{
+                border: 1px solid silver;
+                font-weight: 900;
+                background-color: aqua;
+            }
+            .buyuk{
+                font-family: calibri;
+                font-size: 20pt;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Sınıf Ekleme Silme İşlemleri</h3>
+        <div id="d_ekran"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quibusdam!</span></div>
+        <h1>En Büyük Başlık</h1>
+        <button id="btn_SinifEkle">Sınıf Ekle</button>
+        <button id="btn_SinifSil">Sınıf Sil</button>
+        <button id="btn_SinifToggle">Sınıf Toggle</button>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn_SinifEkle").click(function(){
+                    $("#d_ekran").addClass("kutu");
+                    $("#d_ekran").addClass("buyuk");
+                });
+                $("#btn_SinifSil").click(function(){
+                    $("#d_ekran").removeClass("buyuk");
+                });
+                $("#btn_SinifToggle").click(function(){
+                    $("#d_ekran").toggleClass("kutu");
+                });
+            });
+        </script>
+    </body>
+</html>
